@@ -25,7 +25,7 @@ open class MediaPickerSystemConfig {
     let isNetworkAccessEnabled: Bool
     
     
-    init(assetDeliveryQuality: MPAssetDeliveryQuality = .Auto, assetDeliveryVersion: MPAssetDeliveryVersion = .Current, isNetworkAccessEnabled: Bool = true) {
+    public init(assetDeliveryQuality: MPAssetDeliveryQuality = .Auto, assetDeliveryVersion: MPAssetDeliveryVersion = .Current, isNetworkAccessEnabled: Bool = true) {
         self.assetDeliveryQuality = assetDeliveryQuality
         self.assetDeliveryVersion = assetDeliveryVersion
         self.isNetworkAccessEnabled = isNetworkAccessEnabled
