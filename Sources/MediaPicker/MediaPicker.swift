@@ -67,12 +67,12 @@ open class MediaPicker: UIViewController {
     /// MP Delegate
     weak var delegate: MediaPickerDelegate?
     
-    init(config: MediaPickerConfig) {
+    public init(config: MediaPickerConfig) {
         self.config = config
         super.init(nibName: nil, bundle: nil)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
