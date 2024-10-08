@@ -20,7 +20,7 @@ open class MediaPickerConfig {
     /// System config mainly takes care of the CPU consumption oriented fields
     let systemConfig: MediaPickerSystemConfig
     
-    init(selectionLimit: Int, mediaTypesToSelect: [MPMediaType], systemConfig: MediaPickerSystemConfig = MediaPickerSystemConfig()) {
+    public init(selectionLimit: Int, mediaTypesToSelect: [MPMediaType], systemConfig: MediaPickerSystemConfig = MediaPickerSystemConfig()) {
         self.selectionLimit = selectionLimit
         self.mediaTypesToSelect = mediaTypesToSelect
         self.systemConfig = systemConfig
