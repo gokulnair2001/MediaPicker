@@ -183,7 +183,11 @@ open class MediaPicker: UIViewController {
                 
                 guard let self else { return }
                 
-                self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
+                }
+
             }
             
         } else {
@@ -192,7 +196,10 @@ open class MediaPicker: UIViewController {
                 
                 guard let self else { return }
                 
-                self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
+                }
             }
             
         }
