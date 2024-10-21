@@ -8,7 +8,7 @@
 import UIKit
 
 
-struct MPConstants {
+public struct MPConstants {
     
     struct Color {
         /// Picker Tint Color
