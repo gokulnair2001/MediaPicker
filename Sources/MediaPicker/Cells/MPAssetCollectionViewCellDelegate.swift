@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor
+
 public protocol MPAssetCollectionViewCellDelegate: AnyObject {
     
     /**
