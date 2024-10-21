@@ -54,7 +54,7 @@ open class MediaPicker: UIViewController {
     
     /// On Finish completion block
     var onFinish: ((_ assets: [PHAsset]) -> Void)?
-
+    
     /// On Error completion block
     var onError: ((_ authorisationStatus: PHAuthorizationStatus) -> Void)?
     
@@ -177,32 +177,17 @@ open class MediaPicker: UIViewController {
     /// Requests for PhotoLibrary access
     private func requestPhotoLibraryAccess() {
         
-        if #available(iOS 14, *) {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] status in
             
-            PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] status in
-                
+            guard let self else { return }
+            
+            DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-                
-                DispatchQueue.main.async { [weak self] in
-                    guard let self else { return }
-                    self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
-                }
-
-            }
-            
-        } else {
-            
-            PHPhotoLibrary.requestAuthorization { [weak self] status in
-                
-                guard let self else { return }
-                
-                DispatchQueue.main.async { [weak self] in
-                    guard let self else { return }
-                    self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
-                }
+                self.checkAuthorisationStatusAndFetchAssets(authorisationStatus: status)
             }
             
         }
+        
     }
     
     /// Reloads the picker
@@ -342,7 +327,7 @@ extension MediaPicker {
             
             return UIMenu(title: "", children: [selectAction])
         }
-
+        
     }
     
 }
@@ -388,7 +373,7 @@ extension MediaPicker {
     
     /// States the current authorisation status
     public static var currentAuthorization : PHAuthorizationStatus {
-        return PHPhotoLibrary.authorizationStatus()
+        return PHPhotoLibrary.authorizationStatus(for: .readWrite)
     }
     
 }
