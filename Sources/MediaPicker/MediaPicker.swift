@@ -115,7 +115,6 @@ open class MediaPicker: UIViewController {
     
     private func setupNavigationBar() {
         
-        
         navigationItem.title = "\(selectedAssets.count) Items Selected"
         
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didTapCancelButton))
