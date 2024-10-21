@@ -1,6 +1,6 @@
 # 📹 MediaPicker
 
-As we know Apples UIPickerViewController provides us the functionality to select single image at a time, since our use case is to select multiple images we thought of building our own custom media picker. 
+MediaPicker is a SPM which fills the gap of Apples UIPickerViewController. It provides us the functionality to select multiple media assets at a time.
 
  ### Architecture
 
