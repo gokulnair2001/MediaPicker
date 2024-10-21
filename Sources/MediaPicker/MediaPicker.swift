@@ -341,7 +341,7 @@ extension MediaPicker {
 }
 
 // MARK: - MPAssetCollectionViewCellDelegate
-extension MediaPicker: MPAssetCollectionViewCellDelegate {
+extension MediaPicker: @preconcurrency MPAssetCollectionViewCellDelegate {
     
     /// Delegates when any asset is selected/deselected
     /// - Parameters:
