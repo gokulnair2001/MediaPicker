@@ -12,11 +12,11 @@ public struct MPConstants {
     
     public struct Color {
         /// Picker Tint Color
-        public static let pickerTint: UIColor = .white
-        public static let backgroundColor: UIColor = .white
+        nonisolated(unsafe) public static var pickerTint: UIColor = .white
+        nonisolated(unsafe) public static var backgroundColor: UIColor = .white
     }
 
     public struct Font {
-        public static let cellLabelFont: UIFont? = UIFont(name: "Avenir", size: 14)
+        nonisolated(unsafe) public static var cellLabelFont: UIFont? = UIFont(name: "Avenir", size: 14)
     }
 }
