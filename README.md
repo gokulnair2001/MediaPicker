@@ -4,13 +4,13 @@ MediaPicker is a SPM which fills the gap of Apples UIPickerViewController. It pr
 
  ### Architecture
 
-<img width="779" alt="Sept 20 Screenshot" src="https://github.com/user-attachments/assets/5c54e73e-9bed-4305-a11e-77238e494111">
+<img width="779" alt="SS1" src="https://github.com/user-attachments/assets/5c54e73e-9bed-4305-a11e-77238e494111">
 
 ## **Implementation**
 
 Implementation of MediaPicker is really easy and simple. So in-order to present Media Picker we initially need to create a configuration for it. 
 
-<img width="1001" alt="Sept 20 Screenshot from s3" src="https://github.com/user-attachments/assets/7f21254d-6793-4af4-bf17-d7e679c8fef5">
+<img width="1001" alt="SS2" src="https://github.com/user-attachments/assets/7f21254d-6793-4af4-bf17-d7e679c8fef5">
 
 
 So there are two form of configuration in media picker. 
@@ -33,7 +33,7 @@ Once you are done with the configuration, then you just need to present the Medi
 
 Here present the picker normally, and confirm to its delegate, and you will be able to use the necessary methods.
 
-<img width="1001" alt="Sept 20 Screenshot from s3 (1)" src="https://github.com/user-attachments/assets/e80ba11b-25d5-4e73-b0a2-d5e2e74a8589">
+<img width="1001" alt="SS3" src="https://github.com/user-attachments/assets/e80ba11b-25d5-4e73-b0a2-d5e2e74a8589">
 
 
 > Make sure you go through the code and understand what are the different types of configurations 
@@ -42,7 +42,7 @@ Here present the picker normally, and confirm to its delegate, and you will be a
 
 Here an extension is written for MediaPicker, which can be directly used to present it
 
-<img width="1001" alt="Sept 20 Screenshot (1)" src="https://github.com/user-attachments/assets/db8a17b9-89b5-4f4e-858a-a0f8da8e3f8b">
+<img width="1001" alt="SS4" src="https://github.com/user-attachments/assets/db8a17b9-89b5-4f4e-858a-a0f8da8e3f8b">
 
 Now all you need to do is configure your code as per the need.
 
@@ -54,7 +54,7 @@ Now all you need to do is configure your code as per the need.
 
 Lets understand how under the hood Media Picker works with the following flow chart:
 
-<img width="1624" alt="Sept 20 Screenshot from s3 (2)" src="https://github.com/user-attachments/assets/4253712d-5b5c-4d96-af4c-c8a966994984">
+<img width="1624" alt="SS5" src="https://github.com/user-attachments/assets/4253712d-5b5c-4d96-af4c-c8a966994984">
 
 Initially Media Picker check for the **Authorisation** **status**, accordingly it takes the action. 
 If Request is granted then the **MPStoreManager** will fetch all the assets and start rendering.
